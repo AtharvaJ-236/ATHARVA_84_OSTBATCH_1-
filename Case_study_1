@@ -1,0 +1,32 @@
+Apache Web Server.
+Understanding the developmental model:- Apache HTTP Server is a free and open-source web server that delivers web content through the internet.
+Apache is a cross-platform server software that runs on Unix,Linux,Windows, and macOS.It is capable of serving both static and dynamic content 
+and can be configured to handle different protocols, such as HTTP, HTTPS, and FTP. Apache is the web server that processes requests and serve 
+web assets and content via HTTP. MySQL is the database that stores all your information in an easily queried format. PHP is the programming 
+language that works with apache to help create dynamic web content. It is commonly referred to as Apache and after development, it quickly 
+became the most popular HTTP client on the web. It’s widely thought that Apache gets its name from its development history and process of 
+improvement through applied patches and modules but that was corrected back in 2000. Features of Apache Web Server:
+1. Handling of static files
+2. Loadable dynamic modules
+3. Auto-indexing
+4. .htaccess
+5. Compatible with IPv6
+6. Supports HTTP/2
+7. FTP connections
+8. Gzip compression and decompression
+9. Bandwidth throttling
+10. Perl, PHP, Lua scripts
+11. Load balancing
+12. Session tracking
+13. URL rewriting
+14. Geolocation based on IP address.
+Throughout the last few decades, Apache has proven to be a staple in many popular stacks and the backbone of the early internet year. 
+Licensing:- The Apache License is a permissive free software license written by the Apache software Foundation (ASF). It allows the users to 
+use the software for any purpose, to distribute it, to modify it, and to distribute the modified verisons of the software under the terms of 
+license, without concern for royalties. 
+Mode of Funding:- They are a known for profit organization. But they do receive donations/sponsorship to cover operation costs. Code 
+contributions are mostly from open source community volunteering their time. ASF is a charitable organization, funded by individual donations 
+and corporate sponsors.
+Commercial/non-commercial use:- You can use software with an Apache license for any purpose: personal, internal or external, and commercial.
+Under the Apache license, users are permitted to modify, distribute, and sublicense the original open source code. Commercial use, warranties, 
+and patent claims are also allowed with the Apache license.
