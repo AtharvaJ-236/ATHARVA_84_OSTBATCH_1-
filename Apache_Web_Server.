@@ -1,11 +1,11 @@
 Apache Web Server.
 Understanding the developmental model:- Apache HTTP Server is a free and open-source web server that delivers web content through the internet.
-It is capable of serving both static and dynamic content and can be configured to handle different protocols, such as HTTP, HTTPS, and FTP. 
-Apache is the web server that processes requests and serve web assets and content via HTTP. MySQL is the database that stores all your 
-information in an easily queried format. PHP is the programming language that works with apache to help create dynamic web content. It is 
-commonly referred to as Apache and after development, it quickly became the most popular HTTP client on the web. It’s widely thought that 
-Apache gets its name from its development history and process of improvement through applied patches and modules but that was corrected back 
-in 2000. Features of Apache Web Server:
+Apache is a cross-platform server software that runs on Unix,Linux,Windows, and macOS.It is capable of serving both static and dynamic content 
+and can be configured to handle different protocols, such as HTTP, HTTPS, and FTP. Apache is the web server that processes requests and serve 
+web assets and content via HTTP. MySQL is the database that stores all your information in an easily queried format. PHP is the programming 
+language that works with apache to help create dynamic web content. It is commonly referred to as Apache and after development, it quickly 
+became the most popular HTTP client on the web. It’s widely thought that Apache gets its name from its development history and process of 
+improvement through applied patches and modules but that was corrected back in 2000. Features of Apache Web Server:
 1. Handling of static files
 2. Loadable dynamic modules
 3. Auto-indexing
