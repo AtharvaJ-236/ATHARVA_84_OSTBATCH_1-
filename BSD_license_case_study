@@ -11,7 +11,10 @@ Mode of Funding:
 The group of programmers behind this operating system needs money to keep things going. They decide to rely on donations and sponsorships from individuals, companies, and 
 organizations who appreciate their work. It’s a bit like having a tip jar for their project, and people or businesses can contribute if they like what they see.
 
-Commercial/Non-Commercial Use:
-Now, here’s where it gets interesting. Because of the permissive BSD license, both commercial and non-commercial use is allowed. Companies can use this operating system’s code 
-in their products, even if they plan to make money from those products. At the same time, non-profit organizations or individual developers can use it for free. It’s like giving 
-away your secret recipe for a delicious dish, and both restaurants and home cooks can use it as long as they follow some basic rules.
+Commercial Use:
+1.Businesses often like the BSD license because it’s very business-friendly. They can use the recipe to create products, like software, and sell them without sharing their secrets.
+2.Companies might use BSD-licensed software to build their own products or improve their services.
+
+Non-Commercial Use:
+1.The BSD license is also popular among students, hobbyists, and open-source enthusiasts. They can use the recipe to create projects, just for fun or to learn.
+2.Universities and research institutions might use BSD-licensed software for various research projects.
