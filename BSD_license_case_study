@@ -1,0 +1,17 @@
+Development Model:
+Imagine a group of programmers working together to create a new operating system. They want to encourage collaboration from others, so they choose the BSD development model. 
+This means they make their source code open to anyone who wants to see it or contribute to it. It’s like inviting people to help build a house and giving them the blueprint.
+
+Licensing:
+Now, let’s talk about the license itself. The BSD license they use is like a set of rules for how people can use their code. It’s quite permissive. It says, “You can use our 
+code in your own projects, even for commercial purposes, as long as you follow a few simple rules.” These rules include giving credit to the original developers and not holding 
+them legally responsible if anything goes wrong.
+
+Mode of Funding:
+The group of programmers behind this operating system needs money to keep things going. They decide to rely on donations and sponsorships from individuals, companies, and 
+organizations who appreciate their work. It’s a bit like having a tip jar for their project, and people or businesses can contribute if they like what they see.
+
+Commercial/Non-Commercial Use:
+Now, here’s where it gets interesting. Because of the permissive BSD license, both commercial and non-commercial use is allowed. Companies can use this operating system’s code 
+in their products, even if they plan to make money from those products. At the same time, non-profit organizations or individual developers can use it for free. It’s like giving 
+away your secret recipe for a delicious dish, and both restaurants and home cooks can use it as long as they follow some basic rules.
