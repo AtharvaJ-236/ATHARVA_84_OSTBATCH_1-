@@ -1,0 +1,20 @@
+Development Model:
+Imagine a group of software developers who want to create a new operating system. They decide to follow the GNU development model. In this model, developers work together to 
+create software that anyone can use, study, modify, and distribute. It’s like a big collaborative project where everyone can contribute.
+
+Licensing:
+To make sure their software stays open and free, the developers choose the GNU General Public License (GPL). This license ensures that anyone who uses or modifies their software 
+must also share their changes under the same terms. It’s like a “pay it forward” rule for software.
+
+Mode of Funding:
+For funding, they rely on donations, grants, and volunteer contributions. They don’t sell their software for profit. Instead, they depend on the support of individuals, 
+organizations, and communities who believe in their mission of creating free and open-source software.
+
+Commercial Use:
+You can use GNU-licensed software for commercial purposes, meaning you can use it in your business, sell products or services based on it, and make money from it. However, if 
+you modify and distribute the software to customers, you must also provide them with the same freedoms to use, modify, and distribute your modified version under the same GNU 
+license terms.
+
+Non-Commercial Use:
+You can also use GNU-licensed software for non-commercial purposes, such as personal projects or academic work. The key difference here is that you don’t have an obligation to 
+share your modifications with others if you don’t distribute the software to anyone else. You can still modify it for your own use without any specific requirements.
