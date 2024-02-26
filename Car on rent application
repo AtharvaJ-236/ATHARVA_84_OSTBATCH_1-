@@ -1,0 +1,142 @@
+# Python Project Python.
+import tkinter as tk
+from tkinter import messagebox
+import sqlite3
+from tkinter import ttk
+
+# Function to open car information window
+def open_car_info_window():
+    car_info_window = tk.Toplevel(root)
+    car_info_window.title("Car Information")
+
+    # Function to close car information window
+    def close_car_info_window():
+        car_info_window.destroy()
+
+    # Function to open customer details window
+    def open_customer_details_window():
+        customer_details_window = tk.Toplevel(car_info_window)
+        customer_details_window.title("Customer Details")
+
+        # Function to close customer details window
+        def close_customer_details_window():
+            customer_details_window.destroy()
+
+        # Function to save customer details and show thank you message
+        def save_customer_details():
+            # Retrieve input values
+            customer_name = name_entry.get()
+            customer_phone = phone_entry.get()
+            customer_email = email_entry.get()
+            address = address_entry.get()
+            car_choosed = car_choosed_entry.get()
+
+            # Save customer details to customers_rental_info database
+            conn = sqlite3.connect('customers_rental_info.db')
+            c = conn.cursor()
+            c.execute("INSERT INTO Cars (Customer_name, Customer_phone, Customer_emailid, Customer_address, Car_choosed) VALUES (?, ?, ?, ?, ?)",
+                      (customer_name, customer_phone, customer_email, address, car_choosed))
+            conn.commit()
+            conn.close()
+
+            # Show thank you message
+            messagebox.showinfo("Thank You", "Thank you for choosing a car from us! Drive safely.")
+
+            # Close the customer details window
+            close_customer_details_window()
+
+        # Create labels and entry widgets for customer details
+        tk.Label(customer_details_window, text="Customer Name:",font=('Arial', 16)).grid(row=0, column=0)
+        tk.Label(customer_details_window, text="Phone No:",font=('Arial', 16)).grid(row=1, column=0)
+        tk.Label(customer_details_window, text="Email ID:",font=('Arial', 16)).grid(row=2, column=0)
+        tk.Label(customer_details_window, text="Address:",font=('Arial', 16)).grid(row=3, column=0)
+        tk.Label(customer_details_window, text="Car Choosed:",font=('Arial', 16)).grid(row=4, column=0)
+
+        name_entry = tk.Entry(customer_details_window)
+        name_entry.grid(row=0, column=1)
+        phone_entry = tk.Entry(customer_details_window)
+        phone_entry.grid(row=1, column=1)
+        email_entry = tk.Entry(customer_details_window)
+        email_entry.grid(row=2, column=1)
+        address_entry = tk.Entry(customer_details_window)
+        address_entry.grid(row=3, column=1)
+        car_choosed_entry = tk.Entry(customer_details_window)
+        car_choosed_entry.grid(row=4, column=1)
+
+        # Create buttons for customer details window
+        tk.Button(customer_details_window, text="Cancel", command=close_customer_details_window).grid(row=5, column=0)
+        tk.Button(customer_details_window, text="Save", command=save_customer_details).grid(row=5, column=1)
+
+    # Create buttons for car information window
+    tk.Button(car_info_window, text="Cancel", command=close_car_info_window).pack(side=tk.LEFT)
+    tk.Button(car_info_window, text="Next >", command=open_customer_details_window).pack(side=tk.RIGHT)
+
+    # Create a treeview to display car information
+    tree = ttk.Treeview(car_info_window)
+    tree["columns"] = ("Sr.No","Car_name", "Car_number", "Car_rent", "Fuel_type", "Car_seats", "Transmission","Empty")
+    tree.heading("#1", text="Sr.No")
+    tree.heading("Car_name", text="Car Name")
+    tree.heading("Car_number", text="Car Number")
+    tree.heading("Car_rent", text="Car Rent")
+    tree.heading("Fuel_type", text="Fuel Type")
+    tree.heading("Car_seats", text="Car Seats")
+    tree.heading("Transmission", text="Transmission")
+
+    # Fetch data from the Cars table
+    conn = sqlite3.connect('car_rental.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM Cars")
+    cars_data = c.fetchall()
+
+    # Insert data into the treeview
+    for car in cars_data:
+        tree.insert("", tk.END, values=car)
+
+    tree.pack()
+
+# Function to open customer rental info window
+def open_customer_rental_info_window():
+    customer_rental_info_window = tk.Toplevel(root)
+    customer_rental_info_window.title("Customer Rental Information")
+
+    # Function to close customer rental info window
+    def close_customer_rental_info_window():
+        customer_rental_info_window.destroy()
+
+    # Create a treeview to display customer rental information
+    tree = ttk.Treeview(customer_rental_info_window)
+    tree["columns"] = ("Sr.No","Customer_name", "Customer_phone", "Customer_emailid", "Customer_address", "Car_choosed","Empty")
+    tree.heading("#1", text="Sr.No")
+    tree.heading("Customer_name", text="Customer Name")
+    tree.heading("Customer_phone", text="Phone")
+    tree.heading("Customer_emailid", text="Email ID")
+    tree.heading("Customer_address", text="Address")
+    tree.heading("Car_choosed", text="Car Choosed")
+
+    # Fetch data from the Cars table in customers_rental_info database
+    conn = sqlite3.connect('customers_rental_info.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM Cars")
+    customers_data = c.fetchall()
+
+    # Insert data into the treeview
+    for customer in customers_data:
+        tree.insert("", tk.END, values=customer)
+
+    tree.pack()
+
+    # Create button to close customer rental info window
+    tk.Button(customer_rental_info_window, text="Close", command=close_customer_rental_info_window).pack()
+
+# Create the main window
+root = tk.Tk()
+root.title("Car Rental Application")
+
+# Create labels and buttons for the main window
+tk.Label(root, text="Wanna go on a Ride, Buy a car on Rent!!!").pack(pady=10)
+tk.Button(root, text="Car Info", command=open_car_info_window).pack(pady=10)
+tk.Button(root, text="Customer Rental Info", command=open_customer_rental_info_window).pack(pady=10)
+
+# Start the Tkinter event loop
+root.mainloop()
+
